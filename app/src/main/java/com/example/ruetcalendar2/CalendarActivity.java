@@ -1,8 +1,10 @@
 package com.example.ruetcalendar2;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -143,23 +145,41 @@ public class CalendarActivity extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (int i=0;i<=4;i++)
-                {
-                    for (int j =0;j<=2; j++)
-                    {
-                        for (int k=0; k<=2; k++)
+                AlertDialog.Builder myalert= new AlertDialog.Builder(CalendarActivity.this);
+                myalert.setTitle("Clear Routine");
+                myalert.setMessage("Do you want to clear full routine?");
+                myalert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        for (int i=0;i<=4;i++)
                         {
-                            String p1= i+"";
-                            String p2= j+"";
-                            String p3 =k+"";
-                            String key=p1+p2+p3;
-                            String data="";
-                            dataSave(key,data);
+                            for (int j =0;j<=2; j++)
+                            {
+                                for (int k=0; k<=2; k++)
+                                {
+                                    String p1= i+"";
+                                    String p2= j+"";
+                                    String p3 =k+"";
+                                    String key=p1+p2+p3;
+                                    String data="";
+                                    dataSave(key,data);
 
+                                }
+                            }
                         }
+                        Toast.makeText(getApplicationContext(),"All routine has been cleared",Toast.LENGTH_SHORT).show();
+
                     }
-                }
-                Toast.makeText(getApplicationContext(),"All routine has been cleared",Toast.LENGTH_SHORT).show();
+                });
+                myalert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(),"Routine clearing canceled",Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+                myalert.show();
+
             }
         });
 
