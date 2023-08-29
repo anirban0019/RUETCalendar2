@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ruetcalendar2">
+
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="com.cloud.apps.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RUETCalendar2"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShowRoutine"
+            android:exported="false" />
+        <activity
+            android:name=".SetRoutine"
+            android:exported="false" />
+        <activity
+            android:name=".Timeset"
+            android:exported="false" />
+        <activity
+            android:name=".Classtimes"
+            android:exported="false" />
+        <activity
+            android:name=".daysOfWeek"
+            android:exported="false" />
+        <activity
+            android:name=".RoutineType"
+            android:exported="false" />
+        <activity
+            android:name=".CalendarActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".receivers.TaskReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".receivers.OnBootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

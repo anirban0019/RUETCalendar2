@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    tools:context=".CalendarActivity">
+
+    <com.applandeo.materialcalendarview.CalendarView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        app:eventsEnabled="true"
+        app:type="one_day_picker" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Set Routine"
+        android:textColor="#0B0A0A"
+        android:textStyle="bold"
+        app:strokeColor="#000000" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Show routine"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:text="Clear Routine"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

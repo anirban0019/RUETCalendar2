@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">RUET Calendar</string>
+    <string-array name="typeofroutine">
+        <item>Set New Class Routine</item>
+        <item>Clear previous routine</item>
+    </string-array>
+    <string-array name="days">
+        <item>Saturday</item>
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+    </string-array>
+    <string-array name="ClassTime">
+        <item>Morning (8.00-10.30)</item>
+        <item>Noon (10.50-1.20)</item>
+        <item>Afternoon (2.30-5.00)</item>
+    </string-array>
+    <string-array name="Morning">
+        <item>8.00</item>
+        <item>8.50</item>
+        <item>9.40</item>
+    </string-array>
+    <string-array name="Noon">
+        <item>10.50</item>
+        <item>11.40</item>
+        <item>12.30</item>
+    </string-array>
+    <string-array name="Afternoon">
+        <item>2.30</item>
+        <item>3.20</item>
+        <item>4.10</item>
+    </string-array>
+    <string-array name="Alltimes">
+        <item>8.00 AM</item>
+        <item>8.50 AM</item>
+        <item>9.40 AM</item>
+        <item>10.50 AM</item>
+        <item>11.40 AM</item>
+        <item>12.30 PM</item>
+        <item>2.30 PM</item>
+        <item>3.20 PM</item>
+        <item>4.10 PM</item>
+    </string-array>
+</resources>
